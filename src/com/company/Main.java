@@ -5,6 +5,8 @@ public class Main {
     public static void main(String[] args) {
 
 //        System.out.println("The Answer to Day One is: " + DayOne.getAnswer());
-        System.out.println("the Answer to Day Two is: " + DayTwo.getAnswer());
+//        System.out.println("the Answer to Day One Part Two is: " + DayOnePartTwo.getAnswer());
+//        System.out.println("The Answer to Day Two Part One is: " + DayTwoPartOne.getAnswer());
+        System.out.println("The Answer to Day Two Part Two is: " + DayTwoPartTwo.getAnswer());
     }
 }

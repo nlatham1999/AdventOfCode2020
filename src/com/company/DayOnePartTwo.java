@@ -3,7 +3,7 @@ package com.company;
 import java.io.File;
 import java.util.ArrayList;
 
-public class DayTwo {
+public class DayOnePartTwo {
     public static int getAnswer() {
         ArrayList<Integer> numbers = FileReader.getListOfNumbers("./src/com/company/DayOneInput");
 
