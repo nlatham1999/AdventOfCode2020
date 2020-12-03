@@ -23,6 +23,23 @@ public class FileReader {
         return list;
     }
 
+    public static ArrayList<String> getListOfStrings(String fileName){
+        ArrayList<String> list = new ArrayList<>();
+        try {
+            File myObj = new File(fileName);
+            Scanner myReader = new Scanner(myObj);
+            while (myReader.hasNextLine()) {
+                String data = myReader.nextLine();
+                list.add(data);
+            }
+            myReader.close();
+        } catch (FileNotFoundException e) {
+            System.out.println("An error occurred.");
+            e.printStackTrace();
+        }
+        return list;
+    }
+
     //takes in empty lists for the input and fills them
     public static void getInputForDayTwo(ArrayList<String> passwords, ArrayList<Character> characters, ArrayList<Integer> charMin, ArrayList<Integer> charMax){
         ArrayList<Integer> list = new ArrayList<>();
