@@ -41,7 +41,7 @@ public class FileReader {
     }
 
     //takes in empty lists for the input and fills them
-    public static void getInputForDayTwo(ArrayList<String> passwords, ArrayList<Character> characters, ArrayList<Integer> charMin, ArrayList<Integer> charMax){
+    public static void getInputForDayTwo(ArrayList<String> passwords, ArrayList<Character> characters, ArrayList<Integer> charMin, ArrayList<Integer> charMax) {
         ArrayList<Integer> list = new ArrayList<>();
         try {
             File myObj = new File("./src/com/company/DayTwoInput");
