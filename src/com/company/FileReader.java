@@ -1,5 +1,7 @@
 package com.company;
 
+import javafx.util.Pair;
+
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
@@ -14,6 +16,23 @@ public class FileReader {
             while (myReader.hasNextLine()) {
                 String data = myReader.nextLine();
                 list.add(Integer.parseInt(data));
+            }
+            myReader.close();
+        } catch (FileNotFoundException e) {
+            System.out.println("An error occurred.");
+            e.printStackTrace();
+        }
+        return list;
+    }
+
+    public static ArrayList<Long> getListOfNumbersLong(String fileName){
+        ArrayList<Long> list = new ArrayList<>();
+        try {
+            File myObj = new File(fileName);
+            Scanner myReader = new Scanner(myObj);
+            while (myReader.hasNextLine()) {
+                String data = myReader.nextLine();
+                list.add(Long.parseLong(data));
             }
             myReader.close();
         } catch (FileNotFoundException e) {
@@ -60,6 +79,24 @@ public class FileReader {
             System.out.println("An error occurred.");
             e.printStackTrace();
         }
+    }
+
+    public static ArrayList<Pair<String, Integer>> getOpCOde(String fileName){
+        ArrayList<Pair<String, Integer>> opCodes = new ArrayList<>();
+        try {
+            File myObj = new File(fileName);
+            Scanner myReader = new Scanner(myObj);
+            while (myReader.hasNextLine()) {
+                String data = myReader.nextLine();
+                String[] opcode = data.split(" ");
+                opCodes.add(new Pair<>(opcode[0], Integer.parseInt(opcode[1])));
+            }
+            myReader.close();
+        } catch (FileNotFoundException e) {
+            System.out.println("An error occurred.");
+            e.printStackTrace();
+        }
+        return opCodes;
     }
 
 }
